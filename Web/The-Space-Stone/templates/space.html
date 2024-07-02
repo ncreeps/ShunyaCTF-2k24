@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Stone - Marvel</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        $(document).ready(function () {
+
+            $('#movieForm').submit(function (event) {
+                event.preventDefault();
+                var char_name = $('#character_name').val();
+                $.ajax({
+                    url: '/get_characters',
+                    method: 'POST',
+                    data: { char_name: char_name },
+                    success: function (response) {
+                        $('#characterList').empty();
+                        if (response.length > 0) {
+                            response.forEach(function (character) {
+                                $('#characterList').append('<li><span class="character-name">' + character.name + ' (' + character.role + ')</span></li>' +
+                                    '<p class="character-intro">About:' + '</p>' + '<p>' + character.introduction + '</p>' +
+                                    '<p class="character-rating">Rating: ' + '</p>' + '<p>' + character.rating + '</p>' +
+                                    '<p class="character-movies">Movies: ' + '</p>' + '<p>' + character.movies.join(', ') + '</p>');
+                            });
+                        } else {
+                            $('#characterList').append('<li>No characters found</li>');
+                        }
+                    }
+                });
+            });
+            $('#commentForm').submit(function (event) {
+                event.preventDefault();
+                var form = document.getElementById("comment");
+                // console.log(form.value);
+                var formData = {
+                    "comment": form.value
+                };
+                console.log(formData);
+                fetch("/add_comment", {
+                    method: "POST",
+                    headers: {
+                        "Accept": "application/json",
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(formData),
+                }).then(data => data.json())
+                    .then(data => {
+                        // console.log(data);
+                        let commentBox = document.getElementById("comments");
+                        for (let name in data["comments"]) {
+                            // console.log(name, data["comments"][name]);
+                            commentBox.innerHTML += `<p><strong> ${name}:</strong> ${data["comments"][name]}</p>`;
+                        }
+                    });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>About Marvel Characters</h1>
+    <p class="names">Available characters: Tony Stark, Stephen Strange, Bruce Banner, Natasha Romanoff, Bucky Barnes,
+        Steve
+        Rogers, Thor</p>
+    <form id="movieForm" action="/get_characters" method="post">
+        <label for="character_name">Enter Characters Name:</label>
+        <input type="text" id="character_name" name="character_name" required>
+        <button type="submit">Get Characters</button>
+    </form>
+
+    <ul id="characterList"></ul>
+
+    <h1>Comments</h1>
+    <div id="comments">
+        <p><strong>Hela:</strong> Holy SHit</p>
+        <p><strong>Tobi:</strong> Ask Tony to bring back Rin for me</p>
+        <p><strong>Dick Fury:</strong> Iron Man was a JATT!!</p>
+        <p><strong>Dr. Nic West:</strong>The best surgeon and the best superhero. But you still didn't get the girl.</p>
+        <p><strong>Thanos:</strong>Wassup bois</p>
+    </div>
+    <hr>
+    <form id="commentForm" action="/add_comment" method="post">
+        <label for="comment">Comment:</label><br>
+        <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

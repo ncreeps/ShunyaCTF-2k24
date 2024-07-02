@@ -1,0 +1,118 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #7c3ca1;
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.names {
+    text-align: center;
+}
+
+.character-name {
+    color: #9c44cf;
+    font-weight: bold;
+}
+
+.character-intro {
+    color: #9c44cf;
+}
+
+.character-rating {
+    color: #9c44cf;
+    font-style: italic;
+}
+
+.character-movies {
+    color: #9c44cf;
+}
+
+label {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+input[type="text"],
+textarea {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #7c3ca1;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+}
+
+input[type="submit"],
+button {
+    background-color: #7c3ca1;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #7c3ca1;
+}
+
+#comments {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#comments p {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+#comments p:last-child {
+    border-bottom: none;
+}
+
+#comments p strong {
+    color: #7c3ca1;
+}
+
+#characterList {
+    list-style: none;
+    padding: 0;
+    width: 60%;
+    margin: 20px auto;
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#characterList li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+#characterList li:last-child {
+    border-bottom: none;
+}
