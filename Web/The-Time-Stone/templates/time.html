@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Movies</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1c1c1c;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h1 {
+            font-family: 'Bebas Neue', cursive;
+            color: #13f507;
+            text-shadow: 2px 2px 4px #000000;
+            text-align: center;
+        }
+
+        .card {
+            background-color: #282828;
+            border: 1px solid #13f507;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-title {
+            color: #13f507;
+            font-size: 1.25rem;
+            text-shadow: 1px 1px 2px #000000;
+        }
+
+        .card-text {
+            color: #cccccc;
+        }
+
+        .card-img-top {
+            height: 400px;
+            width: 100%;
+            object-fit: cover;
+            border-bottom: 1px solid #13f507;
+        }
+
+        .card-body {
+            padding: 1rem;
+        }
+
+        .container {
+            padding-top: 2rem;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Marvel Movies</h1>
+        <div class="row" id="movies-container"></div>
+    </div>
+
+    <script>
+        function fetchGoodForYou() {
+            fetch('/api/goodforyou', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ secret: '2d250b1ea4f3a5c907fb46e622ebd1fd' })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('response-text').innerText = data.message;
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        setInterval(fetchGoodForYou, 5000);
+
+        fetch('/api/movies', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ sequence: 'aWQgZGVzYw==' })
+        })
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('movies-container');
+                container.innerHTML = '';
+                data.forEach(movie => {
+                    const movieElement = document.createElement('div');
+                    movieElement.className = 'col-md-4 mb-4';
+                    movieElement.innerHTML = `
+                        <div class="card">
+                            <img src="${movie.poster_url}" class="card-img-top" alt="${movie.title}">
+                            <div class="card-body">
+                                <h5 class="card-title">${movie.title}</h5>
+                                <p class="card-text">Rating: ${movie.rating}</p>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(movieElement);
+                });
+            })
+            .catch(error => console.error('Error fetching movies:', error));
+
+        fetchGoodForYou();
+    </script>
+</body>
+
+</html>
