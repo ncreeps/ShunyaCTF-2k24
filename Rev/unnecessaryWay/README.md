@@ -1,0 +1,1 @@
+Only upload flag file and encoder.exe

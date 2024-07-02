@@ -1,0 +1,1 @@
+Only upload dsa binary file and the flag file
