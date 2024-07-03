@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="page1" class="page">
+            <h2>XZ vulnerability blog</h2>
+            <div class="box">
+                <img src="images/xz-backdoor.jpg" alt="xz image">
+                <p>The XZ vulnerability, identified in the popular XZ Utils compression software, poses a significant
+                    security risk by allowing remote code execution through specially crafted compressed files. This
+                    flaw,
+                    primarily affecting systems that use XZ for decompressing files, can be exploited by attackers to
+                    gain
+                    unauthorized access and potentially take control of affected systems. The vulnerability underscores
+                    the
+                    importance of regularly updating software to mitigate security risks. Users and administrators
+                    should
+                    promptly apply available patches to safeguard their systems against potential attacks exploiting
+                    this
+                    vulnerability.</p>
+            </div>
+        </div>
+        <div id="page2" class="page">
+            <h2>CrushFTP vulnerability blog</h2>
+            <div class="box">
+                <img src="images/CrushFTP.jpg" alt="xz image">
+                <p>CrushFTP, a popular FTP server application, recently faced a critical vulnerability that could allow
+                    unauthorized access and remote code execution. This flaw, identified in specific versions, stems
+                    from inadequate input validation and improper authentication mechanisms. Exploiting this
+                    vulnerability, attackers can gain administrative control, potentially leading to data breaches and
+                    service disruptions. Users are strongly advised to update to the latest patched version immediately.
+                    Regularly updating software and monitoring for security patches are crucial practices to mitigate
+                    such risks and protect sensitive information.</p>
+            </div>
+        </div>
+        <div id="page3" class="page">
+            <h2>EternalBlue vulnerability blog</h2>
+            <div class="box">
+                <img src="images/eternal_blue.jpg" alt="xz image">
+                <p>EternalBlue is a notorious cybersecurity vulnerability that exploits a flaw in Microsoft’s SMB
+                    protocol. Discovered by the NSA and later leaked by the Shadow Brokers group in 2017, it allows
+                    attackers to execute remote code on unpatched systems, effectively taking control. This
+                    vulnerability was infamously utilized by the WannaCry and NotPetya ransomware attacks, causing
+                    widespread disruption and financial loss globally. Despite patches being available, many systems
+                    remain vulnerable, underscoring the critical need for regular updates and robust security practices.
+                </p>
+            </div>
+        </div>
+        <div id="page4" class="page">
+            <h2>Log4J vulnerability blog</h2>
+            <div class="box">
+                <img src="images/Log4J.jpg" alt="xz image">
+                <p>The Log4j vulnerability, also known as Log4Shell, emerged as a critical security flaw in the widely
+                    used Java logging library, Apache Log4j, in December 2021. This vulnerability, identified as
+                    CVE-2021-44228, allows attackers to execute arbitrary code on affected systems, potentially leading
+                    to severe data breaches and system compromises. Exploiting this flaw requires minimal skill, making
+                    it highly dangerous and easily accessible to a broad range of threat actors. Organizations worldwide
+                    have scrambled to apply patches and mitigate the risks associated with Log4Shell.
+                </p>
+            </div>
+        </div>
+        <div id="page5" class="page">
+            <h2>Five/Nine Hack blog</h2>
+            <div class="box">
+                <img src="images/59attack.jpeg" alt="xz image">
+                <p>The 5/9 attack is a monumental hacking operation orchestrated by the protagonist, Elliot Alderson,
+                    and his hacktivist group, fsociety. Named after
+                    the date it occurs, May 9th, the attack aims to erase all debt records by targeting the data centers
+                    of E Corp, a massive conglomerate. The meticulously planned cyber assault involves sophisticated
+                    malware, physical infiltration, and exploiting vulnerabilities, culminating in economic chaos and
+                    societal upheaval. This dramatic depiction underscores the potential real-world consequences of
+                    cyber warfare and the intricate blend of technical expertise.</p>
+            </div>
+        </div>
+
+        <div id="page6" class="page">
+            <h2>String vulnerability blog</h2>
+            <div class="box">
+                <img src="images/strings.jpg" alt="xz image">
+                <p>Recently, a newly discovered string vulnerability has shaken the cybersecurity community. Dubbed
+                    "StringS," this flaw affects multiple programming languages that handle string operations, allowing
+                    attackers to inject malicious code through seemingly innocuous text inputs. The vulnerability can
+                    lead to unauthorized data access, service disruptions, and potential system takeovers. Developers
+                    are urged to sanitize inputs rigorously and apply available patches promptly to mitigate risks.
+                    StringS's widespread impact underscores the critical need for robust input validation and regular
+                    security audits in software development.</p>
+            </div>
+        </div>
+    </div>
+    <div class="navigation">
+        <button onclick="showPage(1)">1</button>
+        <button onclick="showPage(2)">2</button>
+        <button onclick="showPage(3)">3</button>
+        <button onclick="showPage(4)">4</button>
+        <button onclick="showPage(5)">5</button>
+        <button onclick="showPage(6)">6</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
