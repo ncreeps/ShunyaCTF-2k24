@@ -1,0 +1,17 @@
+Pseudocode for Encryption Process:
+
+Derive Key:
+Use scrypt with passphrase and salt to derive a 16-byte key.
+
+Initialize Cipher:
+Initialize AES cipher in CBC mode with the derived key and IV.
+
+Pad Message:
+Pad the message to be a multiple of 16 bytes using PKCS#7.
+
+Encrypt:
+Encrypt the padded message using the cipher.
+
+
+Your Objective:
+Use the provided details to decrypt the message and find the flag. Good luc

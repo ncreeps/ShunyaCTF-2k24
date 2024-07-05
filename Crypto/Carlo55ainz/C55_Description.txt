@@ -1,0 +1,10 @@
+
+_________              .__         .________.________      .__               
+\_   ___ \_____ _______|  |   ____ |   ____/|   ____/____  |__| ____ ________
+/    \  \/\__  \\_  __ \  |  /  _ \|____  \ |____  \\__  \ |  |/    \\___   /
+\     \____/ __ \|  | \/  |_(  <_> )       \/       \/ __ \|  |   |  \/    / 
+ \______  (____  /__|  |____/\____/______  /______  (____  /__|___|  /_____ \
+        \/     \/                        \/       \/     \/        \/      \/
+
+
+Welcome to the Carlo55ainz challenge! Carlos Sainz's F1 team decided to prank him by sending an encrypted joke. As his tech-savvy buddy, your mission is to decrypt it and deliver the laugh (which is also the flag).

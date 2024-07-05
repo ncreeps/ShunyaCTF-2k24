@@ -1,0 +1,29 @@
+Challenge Description
+You are given an encrypted message and need to decrypt it using AES-CBC with scrypt key derivation. The challenge details are:
+
+algorithm: aes
+mode: cbc
+kdf: scrypt
+parameters for scrypt: n=2^14, r=8, p=1, key_len=16
+passphrase: "smooth operator" reversed to "rotarepO htoomS"
+salt: "Scuderia Ferrari"
+iv: 00112233445566778899aabbccddeeff (hex)
+padding: pkcs#7
+cipher text: 'dbbe8d593137891af1811b3a1efa98f80fe0607024527d72a2324cdf9339e8d3'
+Steps to Decrypt the Message
+Derive the Key:
+
+Use scrypt with the passphrase "rotarepO htoomS" and salt "Scuderia Ferrari" to derive a 16-byte key.
+Decrypt the Message:
+
+Initialize AES cipher in CBC mode using the derived key and the provided IV.
+Decrypt the ciphertext.
+Remove PKCS#7 padding from the decrypted message to get the original plaintext.
+
+
+check decrypt_C55 for python script 
+
+
+
+decrypted message: pit stop snacks ready
+The decrypted message "pit stop snacks ready" is the flag for this challenge.
