@@ -1,0 +1,23 @@
+Solution Steps:
+Identify the Cipher Type:
+The hint suggests that the ciphertext is encrypted using a Vigenère cipher and that the key is the title of Kafka's book "In The Penal Colony".
+
+Preprocess the Key:
+Convert the key to a continuous string without spaces:
+
+Original key: "In The Penal Colony"
+Processed key: "InThePenalColony"
+Align the Key with the Ciphertext:
+
+Result:
+By running the code in Mans_Dilemma_Solution , we decrypt the ciphertext "IyphchLhmlp" with the key "InThePenalColony" to get the plaintext:
+
+Decrypted Message (Flag): AlwaysHuman
+
+Conclusion:
+The decrypted message is "AlwaysHuman", which is the flag for this challenge. This solution involves understanding the Vigenère cipher, preprocessing the key, and implementing the decryption algorithm in Python.
+
+
+
+
+
