@@ -5,7 +5,7 @@ import base64
 import json
 import time
 
-url = 'http://192.168.0.105:80'
+url = '<url for the chall>'
 
 flag = ''
 chars = 'abcdefghijklmnopqrstuvwxyz0123456789'
