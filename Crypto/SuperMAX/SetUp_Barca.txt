@@ -1,0 +1,61 @@
+*******************************************************************************
+|                               FP1 SETUP REPORT                               |
+|                      Max Verstappen - Barcelona 2016 - FP1                   |
+*******************************************************************************
+
+Date: May 13, 2016
+Session: Free Practice 1
+
+===============================================================================
+Aerodynamic Setup:
+-------------------------------------------------------------------------------
+- Front Wing Angle: 3.5
+- Rear Wing Angle: 5.0
+- Aero Configuration: Medium to high downforce setup optimized for stability in high-speed corners (Turns 3, 9, and 12) and enhanced grip in medium-speed sections (Turns 5, 7, and 10).
+
+===============================================================================
+Suspension Setup:
+-------------------------------------------------------------------------------
+- Ride Height: 75mm front, 85mm rear
+- Spring Stiffness: 800N/mm front, 1000N/mm rear
+- Anti-roll Bars: Medium stiffness to maintain responsive handling characteristics while ensuring stability under braking and through corner exit.
+
+===============================================================================
+Brake Balance:
+-------------------------------------------------------------------------------
+- Front Brake Bias: 54%
+- Rear Brake Bias: 46%
+- Brake balance adjusted towards the front to optimize braking stability under heavy braking zones like Turn 1 and Turn 10, while maintaining rear stability in medium to high-speed corners.
+
+===============================================================================
+Engine and Powertrain:
+-------------------------------------------------------------------------------
+- Power Unit Mode: Utilizing Qualifying mode (Mode 6) to maximize power output during practice simulations and qualifying runs.
+- ERS Deployment: Strategy focused on optimizing deployment for medium-speed corners (Turns 4, 7, and 10) to enhance acceleration and maintain consistent lap times.
+
+===============================================================================
+Tyre Management:
+-------------------------------------------------------------------------------
+- Tyre Compound: Soft (2016 Pirelli)
+- Tyre /0CTF{M4xVerStoppen}/
+- Tyre Pressures: Front 22.0 psi, Rear 20.5 psi
+- Tyre Wear and Temperature Monitoring: Regular intervals to assess performance degradation and adjust setup parameters accordingly for optimal grip and longevity.
+
+===============================================================================
+Driver Feedback:
+-------------------------------------------------------------------------------
+- Verstappen reported initial setup providing a balanced platform with slight understeer noted in medium-speed corners (Turns 5, 9, and 12). Suggested rear wing adjustment to improve corner entry stability and overall grip levels.
+
+===============================================================================
+Session Strategy:
+-------------------------------------------------------------------------------
+- Planned adjustments include fine-tuning aerodynamic settings based on initial telemetry data to optimize performance for qualifying simulations in FP2.
+- Emphasis on data collection regarding tyre wear and degradation to formulate optimal race strategy considering Barcelona's demanding track conditions.
+
+===============================================================================
+Notes 
+-------------------------------------------------------------------------------
+- Weather conditions: Clear skies, ambient temperature 22°C, track temperature 30°C. Optimal conditions for setup evaluation and performance testing.
+- Team remains confident in initial setup direction but anticipates iterative adjustments throughout the weekend based on evolving track conditions and performance feedback.
+
+*******************************************************************************

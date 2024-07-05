@@ -1,0 +1,19 @@
+Solution Steps:
+
+Step 1: Examine the Text File
+Use the strings command to find hints in Set_Up_Barca.txt
+
+Step 2: Extract Hidden Data from Image
+Use steghide to extract hidden data from Gas_Station_Ideal
+
+Step 3: Unzip Extracted File
+If steghide extracts a zip file , unzip it
+
+Step 4: Retrieve the Final Flag
+Open the dududu text file to get the flag:
+
+
+password for first extraction : GasStation 
+password for second extraction : none 
+
+Flag : M4xVerst4ppen_S1ck_B4nt3r
