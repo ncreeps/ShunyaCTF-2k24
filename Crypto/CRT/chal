@@ -1,0 +1,9 @@
+
+
+x ≡ 1(mod 5)
+x ≡ 1(mod 7)
+x ≡ 3(mod 11)
+
+
+The flag is answer at every stage, for example:  0CTF{M,M1,M2,M3,X1,X2,X3,x}
+

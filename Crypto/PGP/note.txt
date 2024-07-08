@@ -1,0 +1,9 @@
+You have to find the passphrase for the pdf. You know what I mean. 🌝
+
+The main task is to get the key for the other decryption ;)
+
+the IV for decryption has to be the first 8 bytes of public key.
+
+Use UTF-8 for key and IV.
+
+PS: You will get the flag on your face, no need to construct or wrap it.
